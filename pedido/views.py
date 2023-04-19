@@ -1,13 +1,13 @@
+from django.shortcuts import redirect, reverse
+from django.views.generic import ListView, DetailView
+from django.views import View
 # from django.http import HttpResponse
 from django.contrib import messages
-from django.shortcuts import redirect, reverse
-from django.views import View
-from django.views.generic import DetailView, ListView
 
 from produto.models import Variacao
-from utils import utils
+from .models import Pedido, ItemPedido
 
-from .models import ItemPedido, Pedido
+from utils import utils
 
 
 class DispatchLoginRequiredMixin(View):
